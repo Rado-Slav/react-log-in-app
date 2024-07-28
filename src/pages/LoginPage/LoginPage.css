@@ -6,6 +6,7 @@
 /* Container for the login page */
 .login-page {
     max-width: 400px;
+    min-height: 60vh;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;

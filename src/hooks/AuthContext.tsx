@@ -14,7 +14,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const login = (email: string, password: string, callback: () => void) => {
     if (email && password) {
       setIsAuthenticated(true);
-      callback(); // Call the callback after state update
+      callback(); // Call the callback after state update to ensure asyncrhronous data management
     }
   };
 
