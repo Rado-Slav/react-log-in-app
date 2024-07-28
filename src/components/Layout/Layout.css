@@ -10,10 +10,24 @@
   }
   
   .header {
+    align-items: center;
     background-color: #007bff; /* Primary color */
+    display: flex;
+    justify-content: center;
     color: #ffffff;
     padding: 16px;
     text-align: center;
+  }
+
+  .header a {
+    text-decoration: none;
+  }
+
+  .header h1 {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0 15px;
+    min-height: 36px;
   }
   
   .main-content {

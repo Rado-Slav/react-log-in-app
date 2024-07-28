@@ -13,6 +13,7 @@
     "forgot_password": {
       "title": "Forgot Password",
       "email": "Email",
+      "email_not_found": "Email not found in database",
       "submit_button": "Submit",
       "success": "A reset link has been sent to your email.",
       "error": "Please enter a valid email."

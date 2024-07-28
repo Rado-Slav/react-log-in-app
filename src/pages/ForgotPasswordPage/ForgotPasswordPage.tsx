@@ -1,35 +1,37 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../hooks/ChangeLanguage';
+import loginCredentials from '../../data/loginCredentials.json';
 
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 
 import './ForgotPasswordPage.css';
 
-// Forgot Password Success Page with Translation 
-
-
 const ForgotPasswordPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  // Use the Language Context Hook data
   const { language } = useLanguage();
-
   const { t } = useTranslation('translation', { lng: language });
-
-
-  // form submit
 
   const handleSubmit = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailRegex.test(email)) {
+    if (!emailRegex.test(email)) {
+      setError(t('forgot_password.error'));
+      setSuccess(false);
+      return;
+    }
+
+    // Check if the email exists in the registered users' data
+    const user = loginCredentials.find((u) => u.email === email);
+    if (user) {
       setSuccess(true);
       setError('');
+      // Logic for sending the reset link can be added here
     } else {
-      setError(t('forgot_password.error'));
+      setError(t('forgot_password.email_not_found'));
       setSuccess(false);
     }
   };
