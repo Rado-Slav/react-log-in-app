@@ -1,0 +1,17 @@
+{
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "login_button": "Login",
+      "forgot_password": "Forgot Password?",
+      "success": "Login Successful!",
+      "error": "Invalid credentials, please try again."
+    },
+    "forgot_password": {
+      "title": "Forgot Password",
+      "email": "Email",
+      "submit_button": "Submit",
+      "success": "A reset link has been sent to your email."
+    }
+  }

@@ -1,0 +1,30 @@
+/****                   ****/
+/**  Page Not Found CSS   **/
+/*                         */
+
+.page-not-found {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .page-not-found h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #ff6f61; /* Example color for 404 error */
+  }
+  
+  .page-not-found p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .back-home-link {
+    font-size: 1.2rem;
+    color: #007bff; /* Example color for the link */
+    text-decoration: none;
+  }
+  
+  .back-home-link:hover {
+    text-decoration: underline;
+  }
+  

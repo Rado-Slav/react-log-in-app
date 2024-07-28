@@ -1,0 +1,30 @@
+/*****                *****/
+/***   Layout Wrap CSS  ***/
+/*                        */
+
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the layout takes up at least the full viewport height */
+  }
+  
+  .header {
+    background-color: #007bff; /* Primary color */
+    color: #ffffff;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .main-content {
+    flex: 1; /* Allow the main content to grow and fill available space */
+    padding: 20px;
+  }
+  
+  .footer {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }

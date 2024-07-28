@@ -1,0 +1,36 @@
+/*****                *****/
+/***   Form Page CSS   ***/
+/*                        */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .form-container .error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .form-container a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-container a:hover {
+    text-decoration: underline;
+  }

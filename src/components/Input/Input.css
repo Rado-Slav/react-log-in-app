@@ -1,0 +1,45 @@
+/*****                *****/
+/***  Input Custom CSS  ***/
+/*                        */
+
+/* Wrapper for the input field and its label CSS */
+.input-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label CSS */
+.input-label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif; /* Updated font-family for a cleaner look */
+}
+
+/* Input field CSS */
+.input-field {
+    padding: 12px 15px; /* Increased padding for better touch target */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added transition for box-shadow */
+    background-color: #f9f9f9; /* Light background for a softer appearance */
+}
+
+/* Style for input field focus state */
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Added box-shadow for better focus indication */
+}
+
+/* Optional: Add placeholder styling */
+.input-field::placeholder {
+    color: #aaa;
+    font-style: italic;
+    font-family: 'Arial', sans-serif; /* Matching font-family with input */
+}

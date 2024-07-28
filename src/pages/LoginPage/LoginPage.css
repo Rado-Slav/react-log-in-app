@@ -1,0 +1,42 @@
+/*****                *****/
+/***   Login Page CSS   ***/
+/*                        */
+
+
+/* Container for the login page */
+.login-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Title styling */
+.login-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 24px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Error message styling */
+.error {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Success message styling (if needed) */
+.success {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+}
