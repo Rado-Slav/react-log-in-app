@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../hooks/ChangeLanguage';
+
 import Input from '../../components/Input/Input';
-import './ForgotPasswordPage.css';
 import Button from '../../components/Button/Button';
 
-// Forgot Password Page Page with Translation 
+import './ForgotPasswordPage.css';
+
+// Forgot Password Success Page with Translation 
+
 
 const ForgotPasswordPage: React.FC = () => {
-  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+
+  // Use the Language Context Hook data
+  const { language } = useLanguage();
+
+  const { t } = useTranslation('translation', { lng: language });
+
 
   // form submit
 

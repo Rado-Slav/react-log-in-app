@@ -2,17 +2,22 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/AuthContext';
+import { useLanguage } from '../../hooks/ChangeLanguage';
 import loginCredentials from '../../data/loginCredentials.json';
 import './LoginPage.css';
 import Form from '../../components/Form/Form';
 
 const LoginPage: React.FC = () => {
-  const { t } = useTranslation('translation', { lng: 'bg' });
   const navigate = useNavigate();
   const { login, isAuthenticated } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  // Use the Language Context Hook data
+  const { language } = useLanguage();
+
+  const { t } = useTranslation('translation', { lng: language });
 
   const handleLogin = () => {
     const user = loginCredentials.find(
@@ -42,6 +47,7 @@ const LoginPage: React.FC = () => {
         onEmailChange={(e) => setEmail(e.target.value)}
         onPasswordChange={(e) => setPassword(e.target.value)}
         onSubmit={handleLogin}
+        language={language}
         error={error}
         forgotPasswordLink="/forgot-password"
         loginButtonLabel={t('login.login_button')}

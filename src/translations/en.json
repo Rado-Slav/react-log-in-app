@@ -4,14 +4,21 @@
       "email": "Email",
       "password": "Password",
       "login_button": "Login",
+      "logout_button": "Logout",
       "forgot_password": "Forgot Password?",
       "success": "Login Successful!",
+      "success_message": "What a lovely time for a vacation!",
       "error": "Invalid credentials, please try again."
     },
     "forgot_password": {
       "title": "Forgot Password",
       "email": "Email",
       "submit_button": "Submit",
-      "success": "A reset link has been sent to your email."
+      "success": "A reset link has been sent to your email.",
+      "error": "Please enter a valid email."
+    },
+    "not_found": {
+      "error": "Oops! The page you're looking for does not exist.",
+      "button": "Go to Home Page"
     }
   }

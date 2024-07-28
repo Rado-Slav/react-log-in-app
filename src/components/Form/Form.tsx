@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 import './Form.css';
@@ -10,6 +11,7 @@ interface FormProps {
     onEmailChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onPasswordChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onSubmit: () => void;
+    language: string,
     error?: string;
     forgotPasswordLink: string;
     loginButtonLabel: string;
@@ -22,28 +24,33 @@ const Form: React.FC<FormProps> = ({
     onEmailChange,
     onPasswordChange,
     onSubmit,
+    language,
     error,
     forgotPasswordLink,
-    loginButtonLabel
-}) => (
-    <div className="form-container">
-        <h2>{title}</h2>
-        <Input
-            label="Email"
-            type="email"
-            value={email}
-            onChange={onEmailChange}
-        />
-        <Input
-            label="Password"
-            type="password"
-            value={password}
-            onChange={onPasswordChange}
-        />
-        <Button onClick={onSubmit}>{loginButtonLabel}</Button>
-        {error && <p className="error">{error}</p>}
-        <a href={forgotPasswordLink}>Forgot Password?</a>
-    </div>
-);
+    loginButtonLabel,
+}) => {
+    const { t } = useTranslation('translation', { lng: language });
+
+    return (
+        <div className="form-container">
+            <h2>{title}</h2>
+            <Input
+                label={t('login.email')}
+                type="email"
+                value={email}
+                onChange={onEmailChange}
+            />
+            <Input
+                label={t('login.password')}
+                type="password"
+                value={password}
+                onChange={onPasswordChange}
+            />
+            <Button onClick={onSubmit}>{loginButtonLabel}</Button>
+            {error && <p className="error">{error}</p>}
+            <a href={forgotPasswordLink}>{t('login.forgot_password')}</a>
+        </div>
+    );
+};
 
 export default Form;
