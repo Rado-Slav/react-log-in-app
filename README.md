@@ -32,8 +32,8 @@ Clone the Repository
 First, clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/Rado-Slav/react-log-in-app
+cd react-log-in-app
 ```
 
 Install Dependencies
