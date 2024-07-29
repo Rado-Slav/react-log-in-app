@@ -61,6 +61,13 @@ npm test
 
 This will launch the test runner in interactive watch mode. For more details on running tests, see the Create React App testing documentation.
 
+Formatting Code
+To format the code using Prettier:
+
+```bash
+npm run format
+```
+
 Building for Production
 To build the app for production:
 
@@ -82,6 +89,7 @@ npm run eject
 This command will remove the single build dependency from your project and copy all the configuration files and dependencies (webpack, Babel, ESLint, etc.) into your project.
 
 # Project Structure
+
 Here’s a brief overview of the project structure:
 
 src/: Contains all the source code.
@@ -92,12 +100,15 @@ translations/: Translation files for i18n.
 public/: Static assets and the HTML template.
 
 # Languages
+
 The project supports internationalization (i18n) using i18next. Translation files are located in the src/translations folder. To change the language, use the language switcher provided in the UI.
 
 # Deployment
+
 For deployment information, see the Create React App deployment documentation.
 
 # Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request if you have suggestions or improvements.
 
 - Fork the repository
@@ -108,4 +119,5 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 - Create a new Pull Request
 
 # License
+
 This project is licensed under the MIT License. See the LICENSE file for details.

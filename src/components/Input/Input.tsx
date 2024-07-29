@@ -1,5 +1,5 @@
-import React from 'react';
-import './Input.css';
+import React from "react";
+import "./Input.css";
 
 interface InputProps {
   label: string;
@@ -9,10 +9,22 @@ interface InputProps {
   placeholder?: string;
 }
 
-const Input: React.FC<InputProps> = ({ label, type, value, onChange, placeholder }) => (
+const Input: React.FC<InputProps> = ({
+  label,
+  type,
+  value,
+  onChange,
+  placeholder,
+}) => (
   <div className="input-wrapper">
     <label className="input-label">{label}</label>
-    <input className="input-field" type={type} value={value} onChange={onChange} placeholder={placeholder} />
+    <input
+      className="input-field"
+      type={type}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+    />
   </div>
 );
 

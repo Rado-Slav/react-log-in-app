@@ -1,7 +1,7 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import enTranslation from './translations/en.json';
-import bgTranslation from './translations/bg.json';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import enTranslation from "./translations/en.json";
+import bgTranslation from "./translations/bg.json";
 
 // Initialize i18next
 i18n
@@ -15,8 +15,8 @@ i18n
         translation: bgTranslation,
       },
     },
-    lng: 'en', // Default language
-    fallbackLng: 'en', // Fallback language
+    lng: "en", // Default language
+    fallbackLng: "en", // Fallback language
     interpolation: {
       escapeValue: false, // React already escapes values
     },

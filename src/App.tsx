@@ -1,9 +1,9 @@
-import React from 'react';
-import { AuthProvider } from './hooks/AuthContext';
-import { LanguageProvider } from './hooks/ChangeLanguage';
-import './App.css';
-import Layout from './components/Layout/Layout';
-import { AppRoutes } from './components/AppRoutes/AppRoutes';
+import React from "react";
+import { AuthProvider } from "./hooks/AuthContext";
+import { LanguageProvider } from "./hooks/ChangeLanguage";
+import "./App.css";
+import Layout from "./components/Layout/Layout";
+import { AppRoutes } from "./components/AppRoutes/AppRoutes";
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
           <AppRoutes />
         </Layout>
       </AuthProvider>
-    </LanguageProvider>);
+    </LanguageProvider>
+  );
 }
 
 export default App;

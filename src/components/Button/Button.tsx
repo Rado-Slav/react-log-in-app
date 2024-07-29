@@ -1,15 +1,21 @@
-import React from 'react';
-import './Button.css';
+import React from "react";
+import "./Button.css";
 
 type ButtonProps = {
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
   className?: string;
   children: React.ReactNode; // Content to be displayed inside the button
   disabled?: boolean;
 };
 
-const Button: React.FC<ButtonProps> = ({ onClick, type = 'button', className = '', children, disabled = false }) => {
+const Button: React.FC<ButtonProps> = ({
+  onClick,
+  type = "button",
+  className = "",
+  children,
+  disabled = false,
+}) => {
   return (
     <button
       onClick={onClick}
