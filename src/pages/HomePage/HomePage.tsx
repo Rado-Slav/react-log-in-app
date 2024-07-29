@@ -1,3 +1,5 @@
+// Homepage screen after successful login
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -14,8 +16,9 @@ const HomePage: React.FC = () => {
 
   const { logout } = useAuth();
 
+  // Log the user out method
+
   const handleLogout = () => {
-    // Log the user out
     logout();
 
     // Redirect to login page

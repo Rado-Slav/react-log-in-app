@@ -1,6 +1,8 @@
+// Page Router Component 
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from '../../hooks/AuthContext';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/AuthContext';
 import LoginPage from '../../pages/LoginPage/LoginPage';
 import HomePage from '../../pages/HomePage/HomePage'; // Example protected page
 import ForgotPasswordPage from '../../pages/ForgotPasswordPage/ForgotPasswordPage';
@@ -13,6 +15,8 @@ export const AppRoutes: React.FC = () => {
     return (
         <Routes>
             <Route path="/" element={<LoginPage />} />
+
+            {/* Protected Route depending on isAuthenticated value */}
             <Route
                 path="/homepage"
                 element={isAuthenticated ? <HomePage /> : <Navigate to="/page-not-found" />}

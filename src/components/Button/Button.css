@@ -3,8 +3,9 @@
 /*                        */
 
 .custom-button {
+    align-self: center;
     background-color: #007bff; /* Primary button color */
-    color: #ffffff; /* Text color */
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;

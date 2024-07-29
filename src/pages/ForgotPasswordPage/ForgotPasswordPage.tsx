@@ -1,3 +1,5 @@
+// Forgot Password Page
+
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../hooks/ChangeLanguage';
@@ -11,7 +13,8 @@ import './ForgotPasswordPage.css';
 const ForgotPasswordPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState('');
+  const [errorKey, setErrorKey] = useState<string | null>(null);
+  const [shake, setShake] = useState(false);
 
   const { language } = useLanguage();
   const { t } = useTranslation('translation', { lng: language });
@@ -19,8 +22,9 @@ const ForgotPasswordPage: React.FC = () => {
   const handleSubmit = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setError(t('forgot_password.error'));
+      setErrorKey('forgot_password.error');
       setSuccess(false);
+      triggerShake();
       return;
     }
 
@@ -28,12 +32,20 @@ const ForgotPasswordPage: React.FC = () => {
     const user = loginCredentials.find((u) => u.email === email);
     if (user) {
       setSuccess(true);
-      setError('');
+      setErrorKey(null);
       // Logic for sending the reset link can be added here
     } else {
-      setError(t('forgot_password.email_not_found'));
+      setErrorKey('forgot_password.email_not_found');
       setSuccess(false);
+      triggerShake();
     }
+  };
+
+  // Shake Error Label Trigger:
+
+  const triggerShake = () => {
+    setShake(true);
+    setTimeout(() => setShake(false), 500); // Duration of the shake animation
   };
 
   return (
@@ -46,7 +58,9 @@ const ForgotPasswordPage: React.FC = () => {
         onChange={(e) => setEmail(e.target.value)}
       />
       <Button onClick={handleSubmit}>{t('forgot_password.submit_button')}</Button>
-      {error && <p className="error">{error}</p>}
+      {errorKey && (
+        <p className={`error ${shake ? 'shake' : ''}`}>{t(errorKey)}</p>
+      )}
       {success && <p className="success">{t('forgot_password.success')}</p>}
     </div>
   );

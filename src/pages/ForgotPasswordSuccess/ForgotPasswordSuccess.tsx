@@ -1,3 +1,5 @@
+// Forgot Password Success Page
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../hooks/ChangeLanguage';
@@ -10,6 +12,7 @@ const ForgotPasswordSuccess: React.FC = () => {
   const { language } = useLanguage();
 
   const { t } = useTranslation('translation', { lng: language });
+  
   return <div>{t('forgot_password.success')}</div>;
 };
 

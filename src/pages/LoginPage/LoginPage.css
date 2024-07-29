@@ -18,7 +18,6 @@
     justify-content: center;
 }
 
-/* Title styling */
 .login-page h2 {
     font-size: 24px;
     color: #333;
@@ -26,7 +25,6 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Error message styling */
 .error {
     color: #ff4d4f;
     font-size: 14px;
@@ -34,7 +32,6 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Success message styling (if needed) */
 .success {
     color: #28a745;
     font-size: 14px;

@@ -3,34 +3,60 @@
 /*                        */
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
-    padding: 5px;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
   }
-  
-  .form-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
+
+  25% {
+    transform: translateX(-5px);
   }
-  
-  .form-container .error {
-    color: red;
-    margin-top: 10px;
-    text-align: center;
+
+  50% {
+    transform: translateX(5px);
   }
-  
-  .form-container a {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    color: #007bff;
-    text-decoration: none;
+
+  75% {
+    transform: translateX(-5px);
   }
-  
-  .form-container a:hover {
-    text-decoration: underline;
+
+  100% {
+    transform: translateX(0);
   }
+}
+
+.form-container .error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-container .error.shake {
+  animation: shake 0.5s;
+}
+
+.form-container a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}

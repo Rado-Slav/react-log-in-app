@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Layout.css';
 import { useLanguage } from '../../hooks/ChangeLanguage';
 import { useAuth } from '../../hooks/AuthContext';

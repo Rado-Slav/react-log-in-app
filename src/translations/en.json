@@ -8,7 +8,8 @@
       "forgot_password": "Forgot Password?",
       "success": "Login Successful!",
       "success_message": "What a lovely time for a vacation!",
-      "error": "Invalid credentials, please try again."
+      "error": "Invalid credentials, please try again.",
+      "invalid_email": "Invalid email address, please try again."
     },
     "forgot_password": {
       "title": "Forgot Password",
