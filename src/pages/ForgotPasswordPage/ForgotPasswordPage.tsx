@@ -56,6 +56,7 @@ const ForgotPasswordPage: React.FC = () => {
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        placeholder={t("login.email")}
       />
       <Button onClick={handleSubmit}>
         {t("forgot_password.submit_button")}

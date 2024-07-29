@@ -53,12 +53,14 @@ const Form: React.FC<FormProps> = ({
         type="email"
         value={email}
         onChange={onEmailChange}
+        placeholder={t("login.email")}
       />
       <Input
         label={t("login.password")}
         type="password"
         value={password}
         onChange={onPasswordChange}
+        placeholder={t("login.password")}
       />
       <Button onClick={handleButtonClick}>{loginButtonLabel}</Button>
       {errorKey && (
