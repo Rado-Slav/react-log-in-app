@@ -1,3 +1,5 @@
+// TODO: Add Path Aliases for easier imports and base url so we can use import @components/Component
+
 {
   "compilerOptions": {
     "target": "es5",
