@@ -45,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <img className="logged-in-img" src={radich} alt="Love Spain" />
         ) : null}
         <Link to="/">
-          <h1>Log In My App</h1>
+          <h1>{t("header.title")}</h1>
         </Link>
         <Button onClick={handleLanguageChange}>
           {language === "en" ? "BG" : "EN"}
@@ -60,8 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* TODO Create standalone component for Footer */}
       <footer className="footer">
         <p>
-          &copy; {new Date().getFullYear()} Created by Radoslav Mitov. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} {t('footer.copyright')}
         </p>
         {/* footer links or additional information here */}
       </footer>
